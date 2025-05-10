@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import './WeatherInfo.css';
 
-function WeatherInfo({ weather, unit, setUnit }) {
+function WeatherInfo({ weather, unit, setUnit, gifUrl }) {
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString();
 	const formattedTime = now.toLocaleTimeString([], {
@@ -112,22 +112,6 @@ function WeatherInfo({ weather, unit, setUnit }) {
 						<span className="card_details-item-value">
 							{Math.ceil(feelsLike)}°{unit === 'metric' ? 'C' : 'F'}
 						</span>
-					</span>
-				</p>
-
-				<p className="card_details-item">
-					<Sunrise className="card_details-icon" />
-					<span className="card_details-item-text">
-						Amanecer
-						<span className="card_details-item-value">{weather.sunrise}</span>
-					</span>
-				</p>
-
-				<p className="card_details-item">
-					<Sunset className="card_details-icon" />
-					<span className="card_details-item-text">
-						Atardecer
-						<span className="card_details-item-value">{weather.sunset}</span>
 					</span>
 				</p>
 			</div>
