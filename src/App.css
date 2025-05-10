@@ -10,6 +10,8 @@
 	width: 100%;
 	padding: 20px;
 	border-radius: 12px;
+	position: relative; /* Permite que el z-index funcione */
+	z-index: 1;
 }
 
 .card-header {
@@ -18,18 +20,20 @@
 	gap: 10px;
 }
 
-.card-body {
-}
-
 .app-container {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	min-height: 100vh;
+	position: fixed; /* Asegura que cubra toda la pantalla */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
+	z-index: -1; /* Asegura que el fondo quede detrás del contenido */
 }
 
 .sunny {
