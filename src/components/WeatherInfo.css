@@ -1,0 +1,76 @@
+.unit-toggle {
+	margin-top: 0.5rem;
+	padding: 6px 12px;
+	font-size: 0.9rem;
+	background-color: #646cff;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.card_info {
+	text-align: center;
+	color: white; /* Asegura contraste con fondo GIF */
+}
+
+.card_title {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.card_icon {
+	width: 20px;
+	color: #646cff;
+	margin-right: 4px;
+}
+
+.card_span {
+	font-weight: normal;
+}
+
+.card_image {
+	text-align: center;
+}
+
+.card_temp {
+	font-size: 45px;
+	color: white;
+	margin-bottom: 0px;
+}
+
+.card_description {
+	margin: 0;
+	margin-bottom: 15px;
+	font-style: italic;
+}
+
+.card_details {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	margin-top: 1rem;
+}
+
+.card_details-item {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.card_details-icon {
+	width: 15px;
+	color: #646cff;
+}
+
+.card_details-item-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: white;
+}
+
+.card_details-item-value {
+	font-size: small;
+}

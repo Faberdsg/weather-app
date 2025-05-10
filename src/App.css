@@ -1,0 +1,49 @@
+.container {
+	display: grid;
+	place-content: center;
+	height: 100dvh;
+}
+
+.card {
+	background-color: #111;
+	max-width: 400px;
+	width: 100%;
+	padding: 20px;
+	border-radius: 12px;
+}
+
+.card-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.card-body {
+}
+
+.app-container {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+.sunny {
+	background-image: url('/gifs/Sunny.gif');
+}
+
+.cloudy {
+	background-image: url('/gifs/Cloudy.gif');
+}
+
+.rainy {
+	background-image: url('/gifs/Rainy.gif');
+}
+
+.snowy {
+	background-image: url('/gifs/Snowy.gif');
+}
