@@ -84,7 +84,7 @@ function WeatherInfo({ weather, unit, setUnit, gifUrl }) {
 					<span className="card_details-item-text">
 						Visibilidad
 						<span className="card_details-item-value">
-							{weather.visibility} km
+							{weather.visibility / 1000} km
 						</span>
 					</span>
 				</p>

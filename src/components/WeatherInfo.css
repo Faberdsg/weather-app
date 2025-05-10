@@ -13,7 +13,10 @@
 	text-align: center;
 }
 
-.card_title {
+.card_icon {
+	margin-right: 12px;
+	position: relative;
+	top: 2px;
 }
 
 .card_icon {
@@ -27,16 +30,18 @@
 
 .card_image {
 	text-align: center;
+	margin-bottom: 0.5rem;
 }
 
 .card_temp {
 	font-size: 45px;
 	color: #fff;
+	margin-top: -10px;
 	margin-bottom: 0px;
 }
 
 .card_description {
-	margin: 0;
+	margin-top: 20px;
 	margin-bottom: 15px;
 }
 

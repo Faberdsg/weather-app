@@ -77,13 +77,42 @@ function App() {
 		if (!description) return '/gifs/Sunny.gif';
 
 		const lower = description.toLowerCase();
-		if (lower.includes('sol')) return '/gifs/Sunny.gif';
-		if (lower.includes('nubes')) return '/gifs/Cloudy.gif';
-		if (lower.includes('lluvia') || lower.includes('drizzle'))
-			return '/gifs/Rainy.gif';
-		if (lower.includes('nieve')) return '/gifs/Snowy.gif';
 
-		return '/gifs/Sunny.gif';
+		if (
+			lower.includes('despejado') ||
+			lower.includes('soleado') ||
+			lower.includes('calor') ||
+			lower.includes('claro') ||
+			lower.includes('nubes dispersas') ||
+			lower.includes('poco nublado') ||
+			lower.includes('poca nubosidad') ||
+			lower.includes('algo de nubes')
+		)
+			return '/gifs/Sunny.gif';
+
+		if (
+			lower.includes('nubes') ||
+			lower.includes('nublado') ||
+			lower.includes('niebla') ||
+			lower.includes('bruma') ||
+			lower.includes('humo') ||
+			lower.includes('polvo')
+		)
+			return '/gifs/Cloudy.gif';
+
+		if (
+			lower.includes('lluvia') ||
+			lower.includes('llovizna') ||
+			lower.includes('tormenta') ||
+			lower.includes('chubascos') ||
+			lower.includes('tornado')
+		)
+			return '/gifs/Rainy.gif';
+
+		if (lower.includes('nieve') || lower.includes('agua nieve'))
+			return '/gifs/Snowy.gif';
+
+		return '/gifs/Cloudy.gif';
 	};
 
 	return (
