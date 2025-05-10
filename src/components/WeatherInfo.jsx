@@ -20,11 +20,9 @@ function WeatherInfo({ weather, unit, setUnit }) {
 		minute: '2-digit',
 	});
 
-	// Funciones para convertir entre Celsius y Fahrenheit
 	const toFahrenheit = (celsius) => (celsius * 9) / 5 + 32;
 	const toCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
 
-	// Temperatura y sensación térmica en la unidad correspondiente
 	const temp = unit === 'metric' ? weather.temp : toFahrenheit(weather.temp);
 	const feelsLike =
 		unit === 'metric' ? weather.feels_like : toFahrenheit(weather.feels_like);

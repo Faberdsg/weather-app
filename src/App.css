@@ -1,3 +1,10 @@
+.overlay {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 0;
+}
+
 .container {
 	display: grid;
 	place-content: center;
@@ -30,20 +37,4 @@
 	justify-content: center;
 	align-items: center;
 	padding: 1rem;
-}
-
-.sunny {
-	background-image: url('/gifs/Sunny.gif');
-}
-
-.cloudy {
-	background-image: url('/gifs/Cloudy.gif');
-}
-
-.rainy {
-	background-image: url('/gifs/Rainy.gif');
-}
-
-.snowy {
-	background-image: url('/gifs/Snowy.gif');
 }
