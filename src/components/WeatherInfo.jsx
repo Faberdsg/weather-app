@@ -20,25 +20,21 @@ function WeatherInfo({ weather, unit, setUnit }) {
 		minute: '2-digit',
 	});
 
+	// Funciones para convertir entre Celsius y Fahrenheit
+	const toFahrenheit = (celsius) => (celsius * 9) / 5 + 32;
+	const toCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
+
+	// Temperatura y sensación térmica en la unidad correspondiente
+	const temp = unit === 'metric' ? weather.temp : toFahrenheit(weather.temp);
+	const feelsLike =
+		unit === 'metric' ? weather.feels_like : toFahrenheit(weather.feels_like);
+
 	const toggleUnit = () => {
 		setUnit(unit === 'metric' ? 'imperial' : 'metric');
 	};
 
-	// Detectar clase de fondo según la descripción
-	const getBackgroundClass = (description) => {
-		const desc = description.toLowerCase();
-		if (desc.includes('nube')) return 'cloudy';
-		if (desc.includes('lluvia')) return 'rainy';
-		if (desc.includes('tormenta')) return 'storm';
-		if (desc.includes('nieve')) return 'snow';
-		if (desc.includes('sol') || desc.includes('despejado')) return 'sunny';
-		return 'default';
-	};
-
-	const backgroundClass = getBackgroundClass(weather.description || '');
-
 	return (
-		<div className={`card_info ${backgroundClass}`}>
+		<div className="card_info">
 			<h1 className="card_title">
 				<MapPin className="card_icon" />
 				{weather.name}, <span className="card_span">{weather.country}</span>
@@ -55,7 +51,7 @@ function WeatherInfo({ weather, unit, setUnit }) {
 			/>
 
 			<h1 className="card_temp">
-				{weather.temp}°{unit === 'metric' ? 'C' : 'F'}
+				{Math.ceil(temp)}°{unit === 'metric' ? 'C' : 'F'}
 			</h1>
 
 			<button className="unit-toggle" onClick={toggleUnit}>
@@ -116,7 +112,7 @@ function WeatherInfo({ weather, unit, setUnit }) {
 					<span className="card_details-item-text">
 						Sensación
 						<span className="card_details-item-value">
-							{weather.feels_like}°{unit === 'metric' ? 'C' : 'F'}
+							{Math.ceil(feelsLike)}°{unit === 'metric' ? 'C' : 'F'}
 						</span>
 					</span>
 				</p>
